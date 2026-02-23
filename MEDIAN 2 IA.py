@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix
 import joblib
 import matplotlib.pyplot as plt
 import seaborn as sns 
 import streamlit as st
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, confusion_matrix
 
 # 1. CHARGEMENT DES DONNÉES
 # Note : Ton fichier utilise le point-virgule ';' comme séparateur
@@ -96,4 +96,5 @@ g = sns.FacetGrid(df, col="housing", row="loan", margin_titles=True)
 g.map(sns.histplot, "age", color="steelblue", bins=20)
 g.fig.subplots_adjust(top=0.9)
 g.fig.suptitle('Analyse croisée : Âge / Prêt Immobilier / Prêt Personnel')
+
 plt.show()
